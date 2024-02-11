@@ -1,2 +1,94 @@
 <app-navbar></app-navbar>
-<div class="page-container"></div>
+<div class="page-container">
+  <div class="container">
+    <h2>Medication Administration Record</h2>
+    <form>
+      <table class="table table-hover table-sm table-bordered">
+        <thead class="headdark">
+          <tr class="headdark">
+            <td><label for="name">Patient Name</label></td>
+            <td><label for="meds">Medication</label></td>
+            <td><label for="date">Date</label></td>
+            <td><label for="time">Time</label></td>
+            <td><label for="adm">ADM</label></td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let data of submittedMAR; let i = index">
+            <td>{{ data.pname }}</td>
+            <td>{{data.meds}}</td>
+            <td>{{ data.date }}</td>
+            <td>{{ data.time }}</td>
+            <td [ngClass]="getADMColorClass(data.adm)">{{ data.adm }}</td>
+            <!-- <td><button class="btn btn-danger" (click)="deleteRow(i)">Delete</button></td> -->
+          </tr>
+
+          <tr *ngIf="addMode">
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="pname"
+                name="pname"
+                [(ngModel)]="formData.pname"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="meds"
+                name="meds"
+                [(ngModel)]="formData.meds"
+              />
+            </td>
+            <td>
+              <input
+                type="date"
+                class="form-control"
+                id="date"
+                name="date"
+                [(ngModel)]="formData.date"
+              />
+            </td>
+             <td>
+              <input
+                type="time"
+                class="form-control"
+                id="time"
+                name="time"
+                [(ngModel)]="formData.time"
+              />
+            </td>
+            <td>
+              <select
+                class="form-select form-control"
+                id="shift"
+                name="shift"
+                [(ngModel)]="formData.adm"
+              >
+                <option value="GIVEN">GIVEN</option>
+                <option value="NOT GIVEN">NOT GIVEN</option>
+                <option value="DELAYED">DELAYED</option>
+                <option value="DISCONTINUED">DISCONTINUED</option>
+              </select>
+            </td>
+        </tbody>
+      </table>
+    </form>
+    <button class="btn btn-dark me-2 mt-2" *ngIf="!addMode" (click)="AddMode()">
+      Add New Entry
+    </button>
+    <button
+      class="btn btn-success me-2 mt-2"
+      *ngIf="addMode"
+      (click)="submitVital()"
+    >
+      Submit New Entry
+    </button>
+    <button class="btn btn-danger mt-2" *ngIf="addMode" (click)="cancelAdd()">
+      Cancel
+    </button>
+  </div>
+</div>

@@ -11,7 +11,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrl: './vitalsheet.component.scss',
 })
 export class VitalsheetComponent {
-  constructor(private el: ElementRef<HTMLInputElement>) {}
+  constructor() {}
+  
   submittedVitals: any[] = [];
   formData: any = {};
   addMode: boolean = false;
