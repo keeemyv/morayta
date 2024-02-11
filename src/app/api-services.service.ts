@@ -34,6 +34,6 @@ export class ApiService {
   addHealthForm(form: any): void {
     const healthForms = this.getHealthForm();
     healthForms.push(form);
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(healthForms));
+    localStorage.setItem(this.STORAGE_KEY2, JSON.stringify(healthForms));
   }
 }
