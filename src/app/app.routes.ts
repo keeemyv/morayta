@@ -10,6 +10,7 @@ import { NotesComponent } from './notes/notes.component';
 import { EMRComponent } from './emr/emr.component';
 import { MARComponent } from './mar/mar.component';
 import { HAFComponent } from './haf/haf.component';
+import { HafdisplayComponent } from './hafdisplay/hafdisplay.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,9 +18,10 @@ export const routes: Routes = [
   { path: 'records', component: RecordsComponent },
   { path: 'records/registrations', component: RegdisplayComponent},
   {path: 'records/vitals', component: VitalsheetComponent},
-  { path:'records/EMR', component: EMRComponent },
-  { path:'records/MAR', component: MARComponent },
-  { path: 'records/HAF', component: HAFComponent },
+  { path:'records/emr', component: EMRComponent },
+  { path:'records/mar', component: MARComponent },
+  { path: 'records/haf', component: HafdisplayComponent },
+  { path: 'health', component: HAFComponent },
   { path: 'members/team', component: MembersComponent },
   { path: 'about', component: AboutComponent },
   { path: 'notes', component: NotesComponent },

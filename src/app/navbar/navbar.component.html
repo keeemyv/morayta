@@ -1,45 +1,59 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light stick">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link bg-db" href="/home"><strong>Home</strong></a>
-          </li>
-          <!-- Dropdown Menu -->
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Records
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/records/registrations">Registration Sheet</a></li>
-              <li>
-                <a class="dropdown-item" href="/records/HAF">Health Assessment Form</a>
-              </li>
-              <li><a class="dropdown-item" href="/records/vitals">Vital Sheet</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="/records/MAR">MAR</a></li>
-              <li><a class="dropdown-item" href="/records/EMR">EMR</a></li>
-            </ul>
-          </li>
-          <!-- End Dropdown Menu -->
-          <li class="nav-item">
-            <a class="nav-link" href="/members/team">Members</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/notes">Nursing Notes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About Us</a>
-          </li>
-        </ul>
-        <a href="/home"><span class="me-3">🏥</span></a>
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link bg-db" href="/home"><strong>Home</strong></a>
+        </li>
+        <!-- Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Records
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="/records/registrations"
+                >Registration Sheet</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="/records/haf"
+                >Health Assessment Records</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="/records/vitals">Vital Sheet</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="/records/mar">MAR</a></li>
+            <li><a class="dropdown-item" href="/records/emr">EMR</a></li>
+          </ul>
+        </li>
+        <!-- End Dropdown Menu -->
+        <li class="nav-item">
+          <a class="nav-link" href="/members/team">Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/notes">Nursing Notes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+      </ul>
+
+      <div class="">
+        <a href="/forms" class="btn btn-primary me-2 hovery">🏥<span class="text-hover ms-2">Registration Form</span></a>
+      </div>
+      <div class="a">
+        <a href="/health" class="btn btn-warning hovery">💊<span class="text-hover ms-2">Health Assessment Form</span></a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -1,1 +1,243 @@
-<p>haf works!</p>
+<app-navbar></app-navbar>
+<div class="page-container">
+  <div class="main-container">
+    <form [formGroup]="healthForm" (ngSubmit)="onSubmit()">
+      <label for="fullName" class="form-label">Full Name</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="fullName"
+        [(ngModel)]="fullName"
+      />
+      <div *ngIf="validName" class="alert alert-danger">Name is Required!</div>
+
+      <label for="health" class="form-label"
+        >How healthy do you consider yourself on a scale of 1 to 10?</label
+      >
+      <select
+        class="form-select form-control"
+        id="health"
+        formControlName="health"
+        [(ngModel)]="health"
+      >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <label for="q2" class="form-label"
+        >How often do you have medical checkups?</label
+      >
+      <select
+        class="form-select form-control"
+        id="q2"
+        formControlName="q2"
+        [(ngModel)]="q2"
+      >
+        <option value="Not Often">Not Often</option>
+        <option value="Regularly">Regularly</option>
+        <option value="Very Often">Very Often</option>
+      </select>
+
+      <label for="q3" class="form-label"
+        >Have you had immunization for the past two years? What immunization and
+        when was it?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q3"
+        [(ngModel)]="q3"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q4" class="form-label"
+        >Do you have any allergies? If so, what allergies?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q4"
+        [(ngModel)]="q4"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q5" class="form-label"
+        >Any recent major illness (physical, emotional or mental illness)?
+        Indicate what illness.</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q5"
+        [(ngModel)]="q5"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q6" class="form-label"
+        >Does hereditary illness/es run in your family? What illness/es?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q6"
+        [(ngModel)]="q6"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q7" class="form-label"
+        >Are you currently taking any medications and/or vitamins? If yes,
+        kindly indicate what medications and vitamins you take.</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q7"
+        [(ngModel)]="q7"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q8" class="form-label"
+        >What do you usually eat in a day? Describe the kinds of foods you
+        prefer, how often you eat throughout the day, and how much you
+        eat?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q8"
+        [(ngModel)]="q8"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q9" class="form-label"
+        >How much and what types of fluids do you drink?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q9"
+        [(ngModel)]="q9"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q10" class="form-label"
+        >Do you engage in exercise? What types of exercises do you do?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q10"
+        [(ngModel)]="q10"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q11" class="form-label"
+        >How much sleep do you get each night, and do you feel rested when you
+        awaken? Kindly describe your sleeping patterns.</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q11"
+        [(ngModel)]="q11"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q12" class="form-label"
+        >Do you drink any kind of alcohol? If so, how much do you drink on
+        average and when was the last time you drank?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q12"
+        [(ngModel)]="q12"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q13" class="form-label"
+        >Do you currently or have you ever smoked cigarettes or any other form
+        of nicotine? How long have you been smoking/did you smoke?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q13"
+        [(ngModel)]="q13"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q14" class="form-label"
+        >Have you ever used, or do you now use, recreational drugs?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q14"
+        [(ngModel)]="q14"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q15" class="form-label"
+        >For females, at what age did you have your first menstruation? When was
+        your last menstrual period?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q15"
+        [(ngModel)]="q15"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q16" class="form-label"
+        >Do you practice safe sex? Indicate what kinds of contraceptive or
+        natural methods you use.</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q16"
+        [(ngModel)]="q16"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

@@ -4,12 +4,13 @@
     "/about",
     "/about-us",
     "/forms",
+    "/health",
     "/members/team",
     "/notes",
     "/records",
-    "/records/EMR",
-    "/records/HAF",
-    "/records/MAR",
+    "/records/emr",
+    "/records/haf",
+    "/records/mar",
     "/records/registrations",
     "/records/vitals"
   ]

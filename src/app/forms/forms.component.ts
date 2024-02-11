@@ -8,9 +8,6 @@ import {
 } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { ApiService } from '../api-services.service';
-import { Validators } from '@angular/forms';
-import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
-import { NgModel } from '@angular/forms';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({

@@ -85,4 +85,13 @@
   .home-text {
     color: white;
   }
+
+  .text-hover {
+  display: none; /* Initially hide the text */
+}
+
+/* Show the text when hovering over the parent div */
+.hovery:hover .text-hover {
+  display: inline-block;
+}
   
