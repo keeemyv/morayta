@@ -1,5 +1,13 @@
 {
   "routes": [
-    "/"
+    "/",
+    "/about",
+    "/about-us",
+    "/forms",
+    "/members/team",
+    "/notes",
+    "/records",
+    "/records/registrations",
+    "/records/vitals"
   ]
 }
