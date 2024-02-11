@@ -13,10 +13,14 @@ import { NavbarComponent } from '../navbar/navbar.component';
 export class NotesComponent implements OnInit {
   title: string = '';
   content: string = '';
-  notes: { title: string; content: string }[] = [];
+  notes: { title: string, content: string }[] = [];
   addMode: boolean = false;
+  editMode: boolean = false;
+  selectedNote: { title: string, content: string } = { title: '', content: '' };
+  originalTitle: string = '';
+  originalContent: string = '';
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     // Retrieve existing notes from storage
@@ -25,7 +29,7 @@ export class NotesComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if ((this.title && this.content) !== '') {
+    if (this.title && this.content) {
       this.notes.push({ title: this.title, content: this.content });
       // Store notes in localStorage
       localStorage.setItem('notes', JSON.stringify(this.notes));
@@ -33,15 +37,36 @@ export class NotesComponent implements OnInit {
       this.content = '';
     } else {
       alert('Fields cannot be blank!');
-      return;
     }
   }
 
   enterAddMode(): void {
-    this.addMode= true;
+    this.addMode = true;
   }
 
   cancelAddMode(): void {
-    this.addMode= false;
+    this.addMode = false;
+  }
+
+  editCard(note: { title: string, content: string }): void {
+    this.editMode = true;
+    this.selectedNote = { ...note };
+    this.originalTitle = note.title;
+    this.originalContent = note.content;
+  }
+
+  saveChanges(): void {
+    const index = this.notes.findIndex((note) => note === this.selectedNote);
+    if (index !== -1) {
+      this.notes[index] = { ...this.selectedNote };
+      localStorage.setItem('notes', JSON.stringify(this.notes));
+    }
+    this.editMode = false;
+  }
+
+  cancelEdit(): void {
+    this.editMode = false;
+    this.selectedNote.title = this.originalTitle;
+    this.selectedNote.content = this.originalContent;
   }
 }

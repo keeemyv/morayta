@@ -1,18 +1,27 @@
 <app-navbar></app-navbar>
 <div class="page-container">
-  <div *ngIf="notes.length > 0">
-    <!-- <h2 class="mt-4">Submitted Notes</h2> -->
-    <div class="card" *ngFor="let note of notes">
-      <div class="card-body">
+  <div class="card" *ngFor="let note of notes; let i = index">
+    <div class="card-body" (click)="editCard(note)">
+      <ng-container *ngIf="!editMode || note !== selectedNote; else editModeTemplate">
         <h3 class="card-title">{{ note.title }}</h3>
         <p class="card-text">{{ note.content }}</p>
-      </div>
+      </ng-container>
+      <ng-template #editModeTemplate>
+        <input type="text" [(ngModel)]="selectedNote.title" class="form-control mb-2" />
+        <textarea [(ngModel)]="selectedNote.content" class="form-control mb-2" rows="4"></textarea>
+        <button type="button" (click)="saveChanges()" class="btn btn-primary mr-2">Save</button>
+        <button type="button" (click)="cancelEdit()" class="btn btn-secondary">Cancel</button>
+      </ng-template>
     </div>
   </div>
-
-  <button class="btn btn-success mt-5" *ngIf="!addMode" (click)="enterAddMode()">Add Note</button>
-  <button class="btn btn-dark mt-5" *ngIf="addMode" (click)="cancelAddMode()">Cancel</button>
-
+  
+  <button class="btn btn-success mt-5" *ngIf="!addMode" (click)="enterAddMode()">
+    Add Note
+  </button>
+  <button class="btn btn-dark mt-5" *ngIf="addMode" (click)="cancelAddMode()">
+    Cancel
+  </button>
+  
   <form *ngIf="addMode" (submit)="onSubmit()" class="my-4">
     <div class="form-group">
       <label for="title">Title:</label>
@@ -36,7 +45,7 @@
         required
       ></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Submit Note</button>
+    <button type="submit" class="btn btn-success submit">Submit Note</button>
   </form>
+  
 </div>
-

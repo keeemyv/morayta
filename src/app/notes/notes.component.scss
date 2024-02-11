@@ -9,6 +9,15 @@
   padding: 20px;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
 form {
   background-color: #f8f9fa;
   border-radius: 8px;
@@ -48,4 +57,9 @@ button[type="submit"] {
 
 .card-text {
   font-size: 1rem;
+}
+
+.submit {
+  max-width: fit-content;
+  align-content: center;
 }
