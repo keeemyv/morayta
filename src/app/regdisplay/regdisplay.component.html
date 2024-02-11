@@ -1,0 +1,43 @@
+
+<app-navbar></app-navbar>
+<div class="page-container">
+  
+    <div class="container">
+        <h2>Registered Users</h2>
+        <!-- <button class="btn btn-danger" (click)="clearSubmittedForms()">
+          Clear All Data
+        </button> -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Last Name</th>
+              <th>First Name</th>
+              <th>Middle Name</th>
+              <th>Birthday</th>
+              <th>Religion</th>
+              <th>Contact Number</th>
+              <th>Address</th>
+              <th class="red">Emergency Contact</th>
+              <th class="red">Emergency Number</th>
+              <!-- Add more headers for other form fields -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let form of submittedForms">
+              <td>{{ form.lastName }}</td>
+              <td>{{ form.firstName }}</td>
+              <td>{{ form.middleName }}</td>
+              <td>{{ form.birthday }}</td>
+              <td>{{ form.religion }}</td>
+              <td>{{ form.contactNumber }}</td>
+              <td>{{ form.address }}</td>
+              <td>{{ form.emergencyContact }}</td>
+              <td>{{ form.emergencyContactNumber }}</td>
+      
+              <!-- Add more cells for other form fields -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+</div>

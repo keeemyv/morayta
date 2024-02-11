@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="page-container">
+  <div class="container mt-4">
+    <div class="row">
+      <div
+        class="pointer col-md-4 mb-4"
+        *ngFor="let member of members"
+        (click)="openMemberModal(member)"
+      >
+        <div class="team-card hover">
+          <img
+            [src]="member.imageUrl"
+            class="img-fluid"
+            alt="{{ member.name }}"
+          />
+          <div class="team-details">
+            <h3>{{ member.name }}</h3>
+            <!-- <p>{{ member.description }}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal HTML -->
+
+<div id="memberModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeMemberModal()">&times;</span>
+    <h2 class="mt-2">{{ selectedMember.name }}</h2>
+    <p>{{ selectedMember.description }}</p>
+  </div>
+</div>

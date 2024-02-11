@@ -1,0 +1,35 @@
+.mission-container,
+.vision-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mission-container {
+  background-image: url("/assets/mv1.jpg");
+}
+
+.vision-container {
+  background-image: url("/assets/mv2.jpg");
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background */
+  color: #fff; /* White text color */
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.vision-container {
+  background-color: #f8f9fa; /* Adjust as needed */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,177 @@
+<app-navbar></app-navbar>
+<div class="page-container">
+  <div class="container">
+    <h2>Vital Sheet</h2>
+    <form>
+      <table class="table table-hover table-sm table-bordered">
+        <thead class="headdark">
+          <tr class="headdark">
+            <td><label for="name">Patient Name</label></td>
+            <td><label for="date">Date</label></td>
+            <td><label for="shift">Shift</label></td>
+            <td><label for="time">Time</label></td>
+            <td><label for="bloodPressure">Blood Pressure</label></td>
+            <td><label for="temperature">Temperature (°C)</label></td>
+            <td><label for="tempRoute">Temperature Route</label></td>
+            <td><label for="PR">PR</label></td>
+            <td><label for="RR">RR</label></td>
+            <td><label for="O2SAT">O2 SAT (%)</label></td>
+            <td><label for="painScale">Pain Scale (0-10)</label></td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let data of submittedVitals; let i = index">
+            <td>{{ data.pname }}</td>
+            <td>{{ data.date }}</td>
+            <td>{{ data.shift }}</td>
+            <td>{{ data.time }}</td>
+            <td>{{ data.bloodPressure }}</td>
+            <td>{{ data.temperature }}</td>
+            <td>{{ data.tempRoute }}</td>
+            <td>{{ data.PR }}</td>
+            <td>{{ data.RR }}</td>
+            <td>{{ data.O2SAT }}</td>
+            <td>{{ data.painScale }}</td>
+            <!-- <td><button class="btn btn-danger" (click)="deleteRow(i)">Delete</button></td> -->
+          </tr>
+
+          <tr *ngIf="addMode">
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="pname"
+                name="pname"
+                [(ngModel)]="formData.pname"
+              />
+            </td>
+            <td>
+              <input
+                type="date"
+                class="form-control"
+                id="date"
+                name="date"
+                [(ngModel)]="formData.date"
+              />
+            </td>
+            <td>
+              <select
+                class="form-select form-control"
+                id="shift"
+                name="shift"
+                [(ngModel)]="formData.shift"
+              >
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+                <option value="NIGHT">NIGHT</option>
+                <option value="PRN">PRN</option>
+              </select>
+            </td>
+            <td>
+              <input
+                type="time"
+                class="form-control"
+                id="time"
+                name="time"
+                [(ngModel)]="formData.time"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="bloodPressure"
+                name="bloodPressure"
+                [(ngModel)]="formData.bloodPressure"
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                id="temperature"
+                name="temperature"
+                [(ngModel)]="formData.temperature"
+              />
+            </td>
+            <td>
+              <select
+                class="form-select form-control"
+                id="tempRoute"
+                name="tempRoute"
+                [(ngModel)]="formData.tempRoute"
+              >
+                <option value="Oral">Oral</option>
+                <option value="Axilliary">Axilliary</option>
+                <option value="PR">PR</option>
+                <option value="Forehead Scan">Forehead Scan</option>
+              </select>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="PR"
+                name="PR"
+                [(ngModel)]="formData.PR"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="RR"
+                name="RR"
+                [(ngModel)]="formData.RR"
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                id="O2SAT"
+                name="O2SAT"
+                max="100"
+                [(ngModel)]="formData.O2SAT"
+              />
+            </td>
+            <td>
+              <select
+                class="form-select form-control"
+                id="painScale"
+                name="painScale"
+                [(ngModel)]="formData.painScale"
+              >
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <button class="btn btn-dark me-2 mt-2" *ngIf="!addMode" (click)="AddMode()">
+      Add New Entry
+    </button>
+    <button
+      class="btn btn-success me-2 mt-2"
+      *ngIf="addMode"
+      (click)="submitVital()"
+    >
+      Submit New Entry
+    </button>
+    <button class="btn btn-danger mt-2" *ngIf="addMode" (click)="cancelAdd()">
+      Cancel
+    </button>
+  </div>
+</div>
