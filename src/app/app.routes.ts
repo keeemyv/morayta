@@ -7,6 +7,7 @@ import { RecordsComponent } from './records/records.component';
 import { RegdisplayComponent } from './regdisplay/regdisplay.component';
 import { VitalsheetComponent } from './vitalsheet/vitalsheet.component';
 import { NotesComponent } from './notes/notes.component';
+import { EMRComponent } from './emr/emr.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +15,9 @@ export const routes: Routes = [
   { path: 'records', component: RecordsComponent },
   { path: 'records/registrations', component: RegdisplayComponent},
   {path: 'records/vitals', component: VitalsheetComponent},
+  { path:'records/EMR', component: EMRComponent },
+  // { path: 'notes', component: NotesComponent },
+  // { path: 'about', component: AboutComponent }
   { path: 'members/team', component: MembersComponent },
   { path: 'about', component: AboutComponent },
   { path: 'notes', component: NotesComponent },

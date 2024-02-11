@@ -1,0 +1,170 @@
+<app-navbar></app-navbar>
+<div class="page-container">
+  <form [formGroup]="emrForm">
+    <label class="mt-3" style="font-weight: bold" for="pName"
+      >Patient Name:</label
+    >
+    <div>
+      <input type="text" name="pName" id="pName" formControlName="pName" />
+    </div>
+    <div class="emr-container mt-3">
+      <table class="table table-sm table-active table-borderless">
+        <thead>
+          <tr>
+            <!-- <th></th>
+            <th></th>
+            <th></th>
+            <th></th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NE%</td>
+            <td><input type="number" formControlName="nePercent" /></td>
+            <td>NE#</td>
+            <td><input type="number" formControlName="neNumber" /></td>
+          </tr>
+          <tr>
+            <td>LY%</td>
+            <td><input type="number" formControlName="lyPercent" /></td>
+            <td>LY#</td>
+            <td><input type="number" formControlName="lyNumber" /></td>
+          </tr>
+          <tr>
+            <td>MO%</td>
+            <td><input type="number" formControlName="moPercent" /></td>
+            <td>MO#</td>
+            <td><input type="number" formControlName="moNumber" /></td>
+          </tr>
+          <tr>
+            <td>EO%</td>
+            <td><input type="number" formControlName="eoPercent" /></td>
+            <td>EO#</td>
+            <td><input type="number" formControlName="eoNumber" /></td>
+          </tr>
+          <tr>
+            <td>BA%</td>
+            <td><input type="number" formControlName="baPercent" /></td>
+            <td>BA#</td>
+            <td><input type="number" formControlName="baNumber" /></td>
+          </tr>
+
+          <tr>
+            <td>NRBC %</td>
+            <td><input type="number" formControlName="nrbPercent" /></td>
+            <td>NRBC#</td>
+            <td><input type="number" formControlName="nrbNumber" /></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>WBC</td>
+            <td><input type="number" formControlName="wbc" /></td>
+          </tr>
+          <tr>
+            <td>RBC</td>
+            <td><input type="number" formControlName="rbc" /></td>
+          </tr>
+          <tr>
+            <td>HGB</td>
+            <td><input type="number" formControlName="hgb" /></td>
+          </tr>
+          <tr>
+            <td>HCT</td>
+            <td><input type="number" formControlName="hct" /></td>
+          </tr>
+          <tr>
+            <td>MCV</td>
+            <td><input type="number" formControlName="mcv" /></td>
+          </tr>
+          <tr>
+            <td>MCH</td>
+            <td><input type="number" formControlName="mch" /></td>
+          </tr>
+          <tr>
+            <td>MCHC</td>
+            <td><input type="number" formControlName="mchc" /></td>
+          </tr>
+          <tr>
+            <td>RDW</td>
+            <td><input type="number" formControlName="rdw" /></td>
+          </tr>
+          <tr>
+            <td>PLT</td>
+            <td><input type="number" formControlName="plt" /></td>
+          </tr>
+          <tr>
+            <td>MPV</td>
+            <td><input type="number" formControlName="mpv" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+  </form>
+  <div class="submitted-data mt-5">
+    <table class="table table-hover table-light ms-5">
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>NE%</th>
+          <th>LY%</th>
+          <th>MO%</th>
+          <th>EO%</th>
+          <th>BA%</th>
+          <th>NRBC%</th>
+          <th>NE#</th>
+          <th>LY#</th>
+          <th>MO#</th>
+          <th>EO#</th>
+          <th>BA#</th>
+          <th>NRBC#</th>
+          <th>WBC</th>
+          <th>RBC</th>
+          <th>HGB</th>
+          <th>HCT</th>
+          <th>MCV</th>
+          <th>MCH</th>
+          <th>MCHC</th>
+          <th>RDW</th>
+          <th>PLT</th>
+          <th>MPV</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of submittedData">
+          <td>{{ data.pName }}</td>
+          <td>{{ data.nePercent }}</td>
+          <td>{{ data.lyPercent }}</td>
+          <td>{{ data.moPercent }}</td>
+          <td>{{ data.eoPercent }}</td>
+          <td>{{ data.baPercent }}</td>
+          <td>{{ data.nrbPercent }}</td>
+          <td>{{ data.neNumber }}</td>
+          <td>{{ data.lyNumber }}</td>
+          <td>{{ data.moNumber }}</td>
+          <td>{{ data.eoNumber }}</td>
+          <td>{{ data.baNumber }}</td>
+          <td>{{ data.nrbNumber }}</td>
+          <td>{{ data.wbc }}</td>
+          <td>{{ data.rbc }}</td>
+          <td>{{ data.hgb }}</td>
+          <td>{{ data.hct }}</td>
+          <td>{{ data.mcv }}</td>
+          <td>{{ data.mch }}</td>
+          <td>{{ data.mchc }}</td>
+          <td>{{ data.rdw }}</td>
+          <td>{{ data.plt }}</td>
+          <td>{{ data.mpv }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
