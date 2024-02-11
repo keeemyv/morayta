@@ -8,6 +8,8 @@ import { RegdisplayComponent } from './regdisplay/regdisplay.component';
 import { VitalsheetComponent } from './vitalsheet/vitalsheet.component';
 import { NotesComponent } from './notes/notes.component';
 import { EMRComponent } from './emr/emr.component';
+import { MARComponent } from './mar/mar.component';
+import { HAFComponent } from './haf/haf.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,8 +18,8 @@ export const routes: Routes = [
   { path: 'records/registrations', component: RegdisplayComponent},
   {path: 'records/vitals', component: VitalsheetComponent},
   { path:'records/EMR', component: EMRComponent },
-  // { path: 'notes', component: NotesComponent },
-  // { path: 'about', component: AboutComponent }
+  { path:'records/MAR', component: MARComponent },
+  { path: 'records/HAF', component: HAFComponent },
   { path: 'members/team', component: MembersComponent },
   { path: 'about', component: AboutComponent },
   { path: 'notes', component: NotesComponent },

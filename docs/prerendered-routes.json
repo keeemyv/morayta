@@ -8,6 +8,8 @@
     "/notes",
     "/records",
     "/records/EMR",
+    "/records/HAF",
+    "/records/MAR",
     "/records/registrations",
     "/records/vitals"
   ]
