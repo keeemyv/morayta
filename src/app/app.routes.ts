@@ -11,15 +11,17 @@ import { EMRComponent } from './emr/emr.component';
 import { MARComponent } from './mar/mar.component';
 import { HAFComponent } from './haf/haf.component';
 import { HafdisplayComponent } from './hafdisplay/hafdisplay.component';
+import { IvsheetComponent } from './ivsheet/ivsheet.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'records', component: RecordsComponent },
-  { path: 'records/registrations', component: RegdisplayComponent},
-  {path: 'records/vitals', component: VitalsheetComponent},
-  { path:'records/emr', component: EMRComponent },
-  { path:'records/mar', component: MARComponent },
+  { path: 'records/registrations', component: RegdisplayComponent },
+  { path: 'records/vitals', component: VitalsheetComponent },
+  { path: 'records/iv-sheet', component: IvsheetComponent },
+  { path: 'records/emr', component: EMRComponent },
+  { path: 'records/mar', component: MARComponent },
   { path: 'records/haf', component: HafdisplayComponent },
   { path: 'health', component: HAFComponent },
   { path: 'members/team', component: MembersComponent },

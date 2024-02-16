@@ -1,27 +1,27 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
-  selector: 'app-vitalsheet',
+  selector: 'app-ivsheet',
   standalone: true,
   imports: [CommonModule, FormsModule, NavbarComponent],
-  templateUrl: './vitalsheet.component.html',
-  styleUrl: './vitalsheet.component.scss',
+  templateUrl: './ivsheet.component.html',
+  styleUrl: './ivsheet.component.scss',
 })
-export class VitalsheetComponent {
+export class IvsheetComponent {
   constructor() {}
 
-  submittedVitals: any[] = [];
+  submittedIV: any[] = [];
   formData: any = {};
   addMode: boolean = false;
   addModder: boolean = false;
 
   ngOnInit() {
-    const storedData = localStorage.getItem('submittedVitals');
+    const storedData = localStorage.getItem('submittedIV');
     if (storedData) {
-      this.submittedVitals = JSON.parse(storedData);
+      this.submittedIV = JSON.parse(storedData);
     }
   }
 
@@ -36,21 +36,21 @@ export class VitalsheetComponent {
   cancelAdd() {
     this.addMode = false;
   }
-  submitVital() {
-    this.submittedVitals.push({ ...this.formData });
+  submitIV() {
+    this.submittedIV.push({ ...this.formData });
     localStorage.setItem(
       'submittedVitals',
-      JSON.stringify(this.submittedVitals)
+      JSON.stringify(this.submittedIV)
     );
     this.formData = {}; // Clear the form\
     alert('Vital sheet submitted successfully!');
   }
 
   deleteRow(index: number) {
-    this.submittedVitals.splice(index, 1);
+    this.submittedIV.splice(index, 1);
     localStorage.setItem(
-      'submittedVitals',
-      JSON.stringify(this.submittedVitals)
+      'submittedIV',
+      JSON.stringify(this.submittedIV)
     );
   }
 

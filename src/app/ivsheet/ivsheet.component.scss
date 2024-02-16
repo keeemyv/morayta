@@ -1,0 +1,96 @@
+.page-container {
+    background-image: url("/assets/mainbg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  //   display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 1400px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%234c4c4c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M4 5l3-3H1z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #14974b;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #077a37;
+  }
+  
+  .headdark {
+    background-color: darkblue;
+  }
+  
+  .green {
+    color: rgb(47, 230, 123); /* Adjust the color as needed */
+  }
+  
+  .red {
+    color: rgb(219, 60, 60); /* Adjust the color as needed */
+  }
+  
+  .orange {
+    color: rgb(243, 184, 58); /* Adjust the color as needed */
+  }
+  
+  .yellow {
+  color: rgb(71, 71, 24);}
+  

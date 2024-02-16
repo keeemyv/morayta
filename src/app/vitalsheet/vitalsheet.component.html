@@ -10,7 +10,8 @@
             <td><label for="date">Date</label></td>
             <td><label for="shift">Shift</label></td>
             <td><label for="time">Time</label></td>
-            <td><label for="bloodPressure">Blood Pressure</label></td>
+            <td><label for="bloodPressure">BP (Systolic)</label></td>
+            <td><label for="bloodPressure2">BP (Diastolic)</label></td>
             <td><label for="temperature">Temperature (°C)</label></td>
             <td><label for="tempRoute">Temperature Route</label></td>
             <td><label for="PR">PR</label></td>
@@ -26,12 +27,17 @@
             <td>{{ data.date }}</td>
             <td>{{ data.shift }}</td>
             <td>{{ data.time }}</td>
-            <td>{{ data.bloodPressure }}</td>
-            <td>{{ data.temperature }}</td>
+            <td [style.color]="getSYSColor(data.bloodPressure)" >{{ data.bloodPressure }}</td>
+            <td [style.color]="getDIAColor(data.bloodPressure2)" >{{ data.bloodPressure2 }}</td>
+
+            <td [style.color]="getTemperatureColor(data.temperature)">
+              {{ data.temperature }}
+            </td>
             <td>{{ data.tempRoute }}</td>
-            <td>{{ data.PR }}</td>
-            <td>{{ data.RR }}</td>
-            <td>{{ data.O2SAT }}</td>
+            <td [style.color]="getPRColor(data.PR)">{{ data.PR }}</td>
+            <td [style.color]="getRRColor(data.RR)">{{ data.RR }}</td>
+            <td [style.color]="getO2SATColor(data.O2SAT)">{{ data.O2SAT }}</td>
+
             <td>{{ data.painScale }}</td>
             <!-- <td><button class="btn btn-danger" (click)="deleteRow(i)">Delete</button></td> -->
           </tr>
@@ -84,6 +90,15 @@
                 id="bloodPressure"
                 name="bloodPressure"
                 [(ngModel)]="formData.bloodPressure"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="bloodPressure"
+                name="bloodPressure2"
+                [(ngModel)]="formData.bloodPressure2"
               />
             </td>
             <td>

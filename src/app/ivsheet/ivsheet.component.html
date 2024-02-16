@@ -1,0 +1,159 @@
+<app-navbar></app-navbar>
+<div class="page-container">
+  <div class="container">
+    <h2>IV Sheet</h2>
+    <form>
+      <table class="table table-hover table-sm table-bordered">
+        <thead class="headdark">
+          <tr class="headdark">
+            <td><label for="name">Patient Name</label></td>
+            <td><label for="regnum">Registration Number</label></td>
+
+            <td><label for="method">Method</label></td>
+            <td><label for="site">Site</label></td>
+
+            <td><label for="fluidtype">Fluid Type</label></td>
+
+            <td><label for="startdate">Start Date</label></td>
+            <td><label for="enddate">End Date</label></td>
+
+            <td><label for="starttime">Start Time</label></td>
+            <td><label for="endtime">End Time</label></td>
+
+            <td><label for="rate">Rate (ml/hr)</label></td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let data of submittedIV; let i = index">
+            <td>{{ data.pname }}</td>
+            <td>{{ data.regnum }}</td>
+
+            <td>{{ data.method }}</td>
+            <td>{{ data.site }}</td>
+
+            <td>{{ data.fluidtype }}</td>
+
+            <td>{{ data.startdate }}</td>
+            <td>{{ data.enddate }}</td>
+
+            <td>{{ data.starttime }}</td>
+            <td>{{ data.endtime }}</td>
+
+            <td>{{ data.rate }}</td>
+
+            <!-- <td><button class="btn btn-danger" (click)="deleteRow(i)">Delete</button></td> -->
+          </tr>
+
+          <tr *ngIf="addMode">
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="pname"
+                name="pname"
+                [(ngModel)]="formData.pname"
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                id="regnum"
+                name="regnum"
+                [(ngModel)]="formData.regnum"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="method"
+                name="method"
+                [(ngModel)]="formData.method"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="site"
+                name="site"
+                [(ngModel)]="formData.site"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="fluidtype"
+                name="fluidtype"
+                [(ngModel)]="formData.fluidtype"
+              />
+            </td>
+            <td>
+              <input
+                type="date"
+                class="form-control"
+                id="startdate"
+                name="startdate"
+                [(ngModel)]="formData.startdate"
+              />
+            </td>
+            <td>
+              <input
+                type="date"
+                class="form-control"
+                id="enddate"
+                name="enddate"
+                [(ngModel)]="formData.enddate"
+              />
+            </td>
+            <td>
+              <input
+                type="time"
+                class="form-control"
+                id="starttime"
+                name="starttime"
+                [(ngModel)]="formData.starttime"
+              />
+            </td>
+            <td>
+              <input
+                type="time"
+                class="form-control"
+                id="endtime"
+                name="endtime"
+                [(ngModel)]="formData.endtime"
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                class="form-control"
+                id="rate"
+                name="rate"
+                [(ngModel)]="formData.rate"
+              />
+            </td>
+
+            
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <button class="btn btn-dark me-2 mt-2" *ngIf="!addMode" (click)="AddMode()">
+      Add New Entry
+    </button>
+    <button
+      class="btn btn-success me-2 mt-2"
+      *ngIf="addMode"
+      (click)="submitIV()"
+    >
+      Submit New Entry
+    </button>
+    <button class="btn btn-danger mt-2" *ngIf="addMode" (click)="cancelAdd()">
+      Cancel
+    </button>
+  </div>
+</div>
