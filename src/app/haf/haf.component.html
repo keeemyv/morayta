@@ -46,9 +46,12 @@
         <option value="Very Often">Very Often</option>
       </select>
 
+      <h2 class="mt-2 mb-2">Integumentary System</h2>
+
       <label for="q3" class="form-label"
-        >Have you had immunization for the past two years? What immunization and
-        when was it?</label
+        >Are you experiencing any skin problems such as rashes, lesions,
+        dryness, oiliness, drainage, bruising, swelling, or changes in skin
+        color?</label
       >
       <input
         type="text"
@@ -61,8 +64,8 @@
       </div>
 
       <label for="q4" class="form-label"
-        >Do you have any allergies? If so, what allergies?</label
-      >
+        >Are you experiencing any pain, itching, tingling, or numbness?
+      </label>
       <input
         type="text"
         class="form-control"
@@ -74,8 +77,8 @@
       </div>
 
       <label for="q5" class="form-label"
-        >Any recent major illness (physical, emotional or mental illness)?
-        Indicate what illness.</label
+        >Have you had any hair loss, unusual increase in hair growth, or change
+        in the condition of your hair?</label
       >
       <input
         type="text"
@@ -88,8 +91,8 @@
       </div>
 
       <label for="q6" class="form-label"
-        >Does hereditary illness/es run in your family? What illness/es?</label
-      >
+        >Have you had any change in the condition or appearance of your nails?
+      </label>
       <input
         type="text"
         class="form-control"
@@ -101,8 +104,8 @@
       </div>
 
       <label for="q7" class="form-label"
-        >Are you currently taking any medications and/or vitamins? If yes,
-        kindly indicate what medications and vitamins you take.</label
+        >Has anyone in your family had skin cancer? How about a family history
+        of keloids?</label
       >
       <input
         type="text"
@@ -114,11 +117,11 @@
         Field is Required!
       </div>
 
+      <h2 class="mt-2 mb-2">Musculoskeletal System</h2>
       <label for="q8" class="form-label"
-        >What do you usually eat in a day? Describe the kinds of foods you
-        prefer, how often you eat throughout the day, and how much you
-        eat?</label
-      >
+        >Do you have a family history of rheumatoid arthritis, gout, or
+        osteoporosis?
+      </label>
       <input
         type="text"
         class="form-control"
@@ -130,8 +133,11 @@
       </div>
 
       <label for="q9" class="form-label"
-        >How much and what types of fluids do you drink?</label
-      >
+        >Describe any bone, joint, muscle pain you have. Where is the pain? What
+        does the pain feel like (stab, ache)? When did the pain start? When does
+        it occur? How long does it last? Any stiffness or limitation of
+        movement?
+      </label>
       <input
         type="text"
         class="form-control"
@@ -143,7 +149,9 @@
       </div>
 
       <label for="q10" class="form-label"
-        >Do you engage in exercise? What types of exercises do you do?</label
+        >Describe any past problems or injuries you have had to your joints,
+        muscles, or bones. What treatment was given? Do you have any after
+        effects from the injury or problem?</label
       >
       <input
         type="text"
@@ -156,8 +164,8 @@
       </div>
 
       <label for="q11" class="form-label"
-        >How much sleep do you get each night, and do you feel rested when you
-        awaken? Kindly describe your sleeping patterns.</label
+        >What activities do you engage in to promote the health of your muscles
+        and bones (e.g., exercise, diet, weight reduction)?</label
       >
       <input
         type="text"
@@ -169,8 +177,9 @@
         Field is Required!
       </div>
       <label for="q12" class="form-label"
-        >Do you drink any kind of alcohol? If so, how much do you drink on
-        average and when was the last time you drank?</label
+        >Do you have difficulty performing normal ADLs (bathing, dressing,
+        grooming, eating)? Do you use assistive devices (e.g., walker, cane,
+        braces) to promote mobility and ADLs?</label
       >
       <input
         type="text"
@@ -182,9 +191,11 @@
         Field is Required!
       </div>
 
+      <h2 class="mt-2 mb-2">Cardiovascular System</h2>
+
       <label for="q13" class="form-label"
-        >Do you currently or have you ever smoked cigarettes or any other form
-        of nicotine? How long have you been smoking/did you smoke?
+        >Do you experience any chest pain or discomfort, particularly during
+        physical activity?
       </label>
       <input
         type="text"
@@ -197,8 +208,8 @@
       </div>
 
       <label for="q14" class="form-label"
-        >Have you ever used, or do you now use, recreational drugs?</label
-      >
+        >Have you ever been diagnosed with high blood pressure (hypertension)?
+      </label>
       <input
         type="text"
         class="form-control"
@@ -210,8 +221,7 @@
       </div>
 
       <label for="q15" class="form-label"
-        >For females, at what age did you have your first menstruation? When was
-        your last menstrual period?
+        >Do you have a family history of heart disease or stroke?
       </label>
       <input
         type="text"
@@ -224,14 +234,333 @@
       </div>
 
       <label for="q16" class="form-label"
-        >Do you practice safe sex? Indicate what kinds of contraceptive or
-        natural methods you use.</label
-      >
+        >Have you noticed any irregular heartbeats or palpitations?
+      </label>
       <input
         type="text"
         class="form-control"
         formControlName="q16"
         [(ngModel)]="q16"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q17" class="form-label"
+        >Do you experience shortness of breath, especially when lying down or
+        during physical exertion?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q17"
+        [(ngModel)]="q17"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <label for="q18" class="form-label"
+        >Do you experience shortness of breath, especially when lying down or
+        during physical exertion?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q18"
+        [(ngModel)]="q18"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <h2 class="mt-2 mb-2">Respiratory System</h2>
+      <label for="q19" class="form-label"
+        >Do you have trouble breathing? That involves hypercapnia, hypoxia,
+        hypoxemia, and apnea.
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q19"
+        [(ngModel)]="q19"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q20" class="form-label"
+        >Do you smoke? If yes, how often?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q20"
+        [(ngModel)]="q20"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q21" class="form-label"
+        >What kind of workout do you do, and do you have any issues when working
+        out?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q21"
+        [(ngModel)]="q21"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q22" class="form-label"
+        >When you exercise, do you feel pale? Does exercising cause your heart
+        rate to change?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q22"
+        [(ngModel)]="q22"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q23" class="form-label"
+        >How much time have you spent exercising?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q23"
+        [(ngModel)]="q23"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q24" class="form-label"
+        >Have you been coughing? (remaining or unusual)
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q24"
+        [(ngModel)]="q24"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <h2 class="mt-2 mb-2">Gastrointestinal System</h2>
+
+      <label for="q25" class="form-label"
+        >How often is your bowel movement in a week?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q25"
+        [(ngModel)]="q25"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q26" class="form-label"
+        >Do you notice any changes in your bowel?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q26"
+        [(ngModel)]="q26"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q27" class="form-label"
+        >Do you experience pain or discomfort during excretion/pooping?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q27"
+        [(ngModel)]="q27"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q28" class="form-label"
+        >Do you experience any difficulty in peeing/urinating?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q28"
+        [(ngModel)]="q28"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q29" class="form-label"
+        >What color does your pee/urine normally look like?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q29"
+        [(ngModel)]="q29"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <h2 class="mt-2 mb-2">Urine System</h2>
+      <label for="q30" class="form-label"
+        >How often do you urinate in a day?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q30"
+        [(ngModel)]="q30"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q31" class="form-label"
+        >What is the color of your urine and have you noticed any changes in
+        color or odor of your urine recently?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q31"
+        [(ngModel)]="q31"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q32" class="form-label"
+        >Have you experienced any involuntary urination where you leak urine?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q32"
+        [(ngModel)]="q32"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q32" class="form-label"
+        >Have you experienced any involuntary urination where you leak urine?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q32"
+        [(ngModel)]="q32"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q32" class="form-label"
+        >Have you experienced any involuntary urination where you leak urine?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q32"
+        [(ngModel)]="q32"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
+      <h2 class="mt-2 mb-2">Reproductive System (For Women Only)</h2>
+      <label for="q33" class="form-label"
+        >When was your last menstruation period?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q33"
+        [(ngModel)]="q33"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q34" class="form-label"
+        >How many days was your menstrual cycle?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q34"
+        [(ngModel)]="q34"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      
+      <label for="q35" class="form-label"
+        >Are there any discharges during your cycle?
+If yes, what is the texture? (thin, thick, creamy) and its color (white, clear, yellow, green)
+
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q35"
+        [(ngModel)]="q35"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q36" class="form-label"
+        >Are you sexually active?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q36"
+        [(ngModel)]="q36"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q37" class="form-label"
+        >Do you use any forms of contraceptives?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q37"
+        [(ngModel)]="q37"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q39" class="form-label">
+        Do you see any discharges coming out of your genitals?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q39"
+        [(ngModel)]="q39"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q40" class="form-label"
+        >Have you contracted Sexually Transmitted Infections?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q40"
+        [(ngModel)]="q40"
       />
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!

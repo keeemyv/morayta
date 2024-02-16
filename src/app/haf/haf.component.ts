@@ -51,6 +51,30 @@ export class HAFComponent {
   q14: string = '';
   q15: string = '';
   q16: string = '';
+  q17: string = '';
+  q18: string = '';
+  q19: string = '';
+  q20: string = '';
+  q21: string = '';
+  q22: string = '';
+  q23: string = '';
+  q24: string = '';
+  q25: string = '';
+  q26: string = '';
+  q27: string = '';
+  q28: string = '';
+  q29: string = '';
+  q30: string = '';
+  q31: string = '';
+   q32: string = '';
+  q33: string = '';
+  q34: string = '';
+  q35: string = '';
+  q36: string = '';
+  q37: string = '';
+  q39: string = '';
+  q40: string = '';
+
 
   validName: boolean = false;
   validHealth: boolean = false;
@@ -75,6 +99,29 @@ export class HAFComponent {
       q14: [''],
       q15: [''],
       q16: [''],
+      q17: [''],
+      q18: [''],
+      q19: [''],
+      q20: [''],
+      q21: [''],
+      q22: [''],
+      q23: [''],
+      q24: [''],
+      q25: [''],
+      q26: [''],
+      q27: [''],
+      q28: [''],
+      q29: [''],
+      q30: [''],
+      q31: [''],
+      q32: [''],
+      q33: [''],
+      q34: [''],
+      q35: [''],
+      q36: [''],
+      q37: [''],
+      q39: [''],
+      q40: [''],
     });
   }
 
@@ -105,8 +152,22 @@ export class HAFComponent {
       !this.q13 ||
       !this.q14 ||
       !this.q15 ||
-      !this.q16
-    ) {
+      !this.q16 || !this.q17 ||!this.q18 || !this.q19 || !this.q20 || !this.q21 ||   !this.q22 ||
+      !this.q23 ||
+      !this.q23 ||
+      !this.q24 ||
+      !this.q25 ||
+      !this.q26 ||
+      !this.q27 ||
+      !this.q28 ||
+      !this.q29 ||
+      !this.q30 ||
+      !this.q31 ||
+      !this.q32 ||
+      !this.q33 ||
+      !this.q34 ||
+      !this.q35 ||
+      !this.q36 || !this.q37 || !this.q39 || !this.q40 ) {
       this.validField = true;
       return;
     }
