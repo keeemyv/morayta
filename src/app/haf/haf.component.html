@@ -260,8 +260,6 @@
         Field is Required!
       </div>
 
-     
-
       <h2 class="mt-2 mb-2">Respiratory System</h2>
       <label for="q19" class="form-label"
         >Do you have trouble breathing? That involves hypercapnia, hypoxia,
@@ -301,7 +299,7 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-     
+
       <label for="q23" class="form-label"
         >How much time have you spent exercising?
       </label>
@@ -365,7 +363,6 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      
 
       <h2 class="mt-2 mb-2">Urinary System</h2>
       <label for="q30" class="form-label"
@@ -406,7 +403,7 @@
         Field is Required!
       </div>
       <label for="q32" class="form-label"
-        >Do you experience difficulty or pain while urinating?” AND “do you have a history of urinary tract infections (UTIs)?
+        >Do you experience difficulty or pain while urinating? 
       </label>
       <input
         type="text"
@@ -417,6 +414,21 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
+
+      <label for="q32" class="form-label"
+        >Do you have
+        a history of urinary tract infections (UTIs)?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q32"
+        [(ngModel)]="q32"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
       
 
       <h2 class="mt-2 mb-2">Reproductive System</h2>
@@ -444,11 +456,11 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      
-      <label for="q35" class="form-label"
-        >Are there any discharges during your cycle? (For Women Only)
-If yes, what is the texture? (thin, thick, creamy) and its color (white, clear, yellow, green).
 
+      <label for="q35" class="form-label"
+        >Are there any discharges during your cycle? (For Women Only) If yes,
+        what is the texture? (thin, thick, creamy) and its color (white, clear,
+        yellow, green).
       </label>
       <input
         type="text"
@@ -459,9 +471,7 @@ If yes, what is the texture? (thin, thick, creamy) and its color (white, clear, 
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q36" class="form-label"
-        >Are you sexually active?
-      </label>
+      <label for="q36" class="form-label">Are you sexually active? </label>
       <input
         type="text"
         class="form-control"
@@ -496,7 +506,8 @@ If yes, what is the texture? (thin, thick, creamy) and its color (white, clear, 
         Field is Required!
       </div>
       <label for="q40" class="form-label"
-        >Have you ever been diagnosed with any sexually transmitted diseases (STDs) in the past or present?
+        >Have you ever been diagnosed with any sexually transmitted diseases
+        (STDs) in the past or present?
       </label>
       <input
         type="text"
