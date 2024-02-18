@@ -48,13 +48,19 @@ export class MARComponent {
   }
 
   deleteRow(index: number) {
-    this.submittedMAR.splice(index, 1);
-    localStorage.setItem(
-      'submittedMAR', // Update the key to 'submittedMAR'
-      JSON.stringify(this.submittedMAR)
+    const isConfirmed = window.confirm(
+      'Are you sure you want to delete this data?'
     );
+
+    if (isConfirmed) {
+      this.submittedMAR.splice(index, 1);
+      localStorage.setItem(
+        'submittedMAR', // Update the key to 'submittedMAR'
+        JSON.stringify(this.submittedMAR)
+      );
+    }
   }
-  
+
   getADMColorClass(admOption: string): string {
     switch (admOption) {
       case 'GIVEN':

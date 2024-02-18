@@ -21,6 +21,7 @@
             <td><label for="endtime">End Time</label></td>
 
             <td><label for="rate">Rate (ml/hr)</label></td>
+            <td *ngIf="!addMode"></td>
           </tr>
         </thead>
 
@@ -41,8 +42,9 @@
             <td>{{ data.endtime }}</td>
 
             <td>{{ data.rate }}</td>
-
-            <!-- <td><button class="btn btn-danger" (click)="deleteRow(i)">Delete</button></td> -->
+            <td *ngIf="!addMode"><button class="btn btn-danger" (click)="deleteRow(i)">
+              <i class="fas fa-trash-alt"></i>
+            </button></td>
           </tr>
 
           <tr *ngIf="addMode">

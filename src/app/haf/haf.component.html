@@ -403,7 +403,7 @@
         Field is Required!
       </div>
       <label for="q32" class="form-label"
-        >Do you experience difficulty or pain while urinating? 
+        >Do you experience difficulty or pain while urinating?
       </label>
       <input
         type="text"
@@ -416,8 +416,7 @@
       </div>
 
       <label for="q32" class="form-label"
-        >Do you have
-        a history of urinary tract infections (UTIs)?
+        >Do you have a history of urinary tract infections (UTIs)?
       </label>
       <input
         type="text"
@@ -428,8 +427,6 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-
-      
 
       <h2 class="mt-2 mb-2">Reproductive System</h2>
       <label for="q33" class="form-label"
@@ -508,6 +505,31 @@
       <label for="q40" class="form-label"
         >Have you ever been diagnosed with any sexually transmitted diseases
         (STDs) in the past or present?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q40"
+        [(ngModel)]="q40"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q40" class="form-label"
+        >Do you have abdominal pain? Are there associated symptoms with the pain
+        such as fever, nausea, vomiting, or change in bowel pattern?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q40"
+        [(ngModel)]="q40"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q40" class="form-label"
+        >Do you have any difficulty swallowing food or liquids (dysphagia)?
       </label>
       <input
         type="text"

@@ -8,9 +8,11 @@
           <tr class="headdark">
             <td><label for="name">Patient Name</label></td>
             <td><label for="meds">Medication</label></td>
+            <td><label for="dose">Dosage</label></td>
             <td><label for="date">Date</label></td>
             <td><label for="time">Time</label></td>
             <td><label for="adm">ADM</label></td>
+            <td *ngIf="!addMode"></td>
           </tr>
         </thead>
 
@@ -18,10 +20,11 @@
           <tr *ngFor="let data of submittedMAR; let i = index">
             <td>{{ data.pname }}</td>
             <td>{{data.meds}}</td>
+            <td>{{data.dose}}</td>
             <td>{{ data.date }}</td>
             <td>{{ data.time }}</td>
             <td [ngClass]="getADMColorClass(data.adm)">{{ data.adm }}</td>
-            <!-- <td><button class="btn btn-danger" (click)="deleteRow(i)">Delete</button></td> -->
+            <td *ngIf="!addMode"><button class="btn btn-danger" (click)="deleteRow(i)"><i class="fas fa-trash-alt"></i></button></td>
           </tr>
 
           <tr *ngIf="addMode">
@@ -41,6 +44,15 @@
                 id="meds"
                 name="meds"
                 [(ngModel)]="formData.meds"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="dose"
+                name="dose"
+                [(ngModel)]="formData.dose"
               />
             </td>
             <td>

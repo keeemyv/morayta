@@ -38,20 +38,20 @@ export class IvsheetComponent {
   }
   submitIV() {
     this.submittedIV.push({ ...this.formData });
-    localStorage.setItem(
-      'submittedVitals',
-      JSON.stringify(this.submittedIV)
-    );
+    localStorage.setItem('submittedVitals', JSON.stringify(this.submittedIV));
     this.formData = {}; // Clear the form\
     alert('Vital sheet submitted successfully!');
   }
 
   deleteRow(index: number) {
-    this.submittedIV.splice(index, 1);
-    localStorage.setItem(
-      'submittedIV',
-      JSON.stringify(this.submittedIV)
+    const isConfirmed = window.confirm(
+      'Are you sure you want to delete this data?'
     );
+
+    if (isConfirmed) {
+      this.submittedIV.splice(index, 1);
+      localStorage.setItem('submittedIV', JSON.stringify(this.submittedIV));
+    }
   }
 
   getTemperatureColor(temperature: number): string {

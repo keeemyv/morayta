@@ -47,11 +47,15 @@ export class VitalsheetComponent {
   }
 
   deleteRow(index: number) {
+
+    const isConfirmed = window.confirm('Are you sure you want to delete this data?');
+    
+    if (isConfirmed) {
     this.submittedVitals.splice(index, 1);
     localStorage.setItem(
       'submittedVitals',
       JSON.stringify(this.submittedVitals)
-    );
+    );}
   }
 
   getTemperatureColor(temperature: number): string {

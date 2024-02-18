@@ -20,7 +20,10 @@ export class RegdisplayComponent {
   }
 
   clearSubmittedForms(): void {
+    const isConfirmed = window.confirm('Are you sure you want to clear all data?');
+    
+    if (isConfirmed) {
     this.apiService.clearSubmittedForms();
     this.submittedForms = [];
-  }
+  }}
 }

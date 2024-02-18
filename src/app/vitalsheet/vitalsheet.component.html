@@ -18,6 +18,7 @@
             <td><label for="RR">RR</label></td>
             <td><label for="O2SAT">O2 SAT (%)</label></td>
             <td><label for="painScale">Pain Scale (0-10)</label></td>
+            <td *ngIf="!addMode"></td>
           </tr>
         </thead>
 
@@ -39,7 +40,9 @@
             <td [style.color]="getO2SATColor(data.O2SAT)">{{ data.O2SAT }}</td>
 
             <td>{{ data.painScale }}</td>
-            <!-- <td><button class="btn btn-danger" (click)="deleteRow(i)">Delete</button></td> -->
+            <td *ngIf="!addMode"><button class="btn btn-danger" (click)="deleteRow(i)">
+    <i class="fas fa-trash-alt"></i>
+  </button></td>
           </tr>
 
           <tr *ngIf="addMode">
