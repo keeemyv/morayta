@@ -260,19 +260,7 @@
         Field is Required!
       </div>
 
-      <label for="q18" class="form-label"
-        >Do you experience shortness of breath, especially when lying down or
-        during physical exertion?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q18"
-        [(ngModel)]="q18"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+     
 
       <h2 class="mt-2 mb-2">Respiratory System</h2>
       <label for="q19" class="form-label"
@@ -313,19 +301,7 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q22" class="form-label"
-        >When you exercise, do you feel pale? Does exercising cause your heart
-        rate to change?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q22"
-        [(ngModel)]="q22"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+     
       <label for="q23" class="form-label"
         >How much time have you spent exercising?
       </label>
@@ -389,32 +365,9 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q28" class="form-label"
-        >Do you experience any difficulty in peeing/urinating?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q28"
-        [(ngModel)]="q28"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
-      <label for="q29" class="form-label"
-        >What color does your pee/urine normally look like?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q29"
-        [(ngModel)]="q29"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+      
 
-      <h2 class="mt-2 mb-2">Urine System</h2>
+      <h2 class="mt-2 mb-2">Urinary System</h2>
       <label for="q30" class="form-label"
         >How often do you urinate in a day?
       </label>
@@ -453,7 +406,7 @@
         Field is Required!
       </div>
       <label for="q32" class="form-label"
-        >Have you experienced any involuntary urination where you leak urine?
+        >Do you experience difficulty or pain while urinating?” AND “do you have a history of urinary tract infections (UTIs)?
       </label>
       <input
         type="text"
@@ -464,22 +417,11 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q32" class="form-label"
-        >Have you experienced any involuntary urination where you leak urine?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q32"
-        [(ngModel)]="q32"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+      
 
-      <h2 class="mt-2 mb-2">Reproductive System (For Women Only)</h2>
+      <h2 class="mt-2 mb-2">Reproductive System</h2>
       <label for="q33" class="form-label"
-        >When was your last menstruation period?
+        >When was your last menstruation period? (For Women Only)
       </label>
       <input
         type="text"
@@ -491,7 +433,7 @@
         Field is Required!
       </div>
       <label for="q34" class="form-label"
-        >How many days was your menstrual cycle?
+        >How many days was your menstrual cycle? (For Women Only)
       </label>
       <input
         type="text"
@@ -504,8 +446,8 @@
       </div>
       
       <label for="q35" class="form-label"
-        >Are there any discharges during your cycle?
-If yes, what is the texture? (thin, thick, creamy) and its color (white, clear, yellow, green)
+        >Are there any discharges during your cycle? (For Women Only)
+If yes, what is the texture? (thin, thick, creamy) and its color (white, clear, yellow, green).
 
       </label>
       <input
@@ -554,7 +496,7 @@ If yes, what is the texture? (thin, thick, creamy) and its color (white, clear, 
         Field is Required!
       </div>
       <label for="q40" class="form-label"
-        >Have you contracted Sexually Transmitted Infections?
+        >Have you ever been diagnosed with any sexually transmitted diseases (STDs) in the past or present?
       </label>
       <input
         type="text"
