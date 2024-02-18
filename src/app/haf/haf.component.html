@@ -364,6 +364,32 @@
         Field is Required!
       </div>
 
+      <label for="q40" class="form-label"
+        >Do you have abdominal pain? Are there associated symptoms with the pain
+        such as fever, nausea, vomiting, or change in bowel pattern?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q40"
+        [(ngModel)]="q40"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q40" class="form-label"
+        >Do you have any difficulty swallowing food or liquids (dysphagia)?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q40"
+        [(ngModel)]="q40"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+
       <h2 class="mt-2 mb-2">Urinary System</h2>
       <label for="q30" class="form-label"
         >How often do you urinate in a day?
@@ -515,31 +541,7 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q40" class="form-label"
-        >Do you have abdominal pain? Are there associated symptoms with the pain
-        such as fever, nausea, vomiting, or change in bowel pattern?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q40"
-        [(ngModel)]="q40"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
-      <label for="q40" class="form-label"
-        >Do you have any difficulty swallowing food or liquids (dysphagia)?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q40"
-        [(ngModel)]="q40"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+      
 
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
