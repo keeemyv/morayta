@@ -377,14 +377,14 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q40" class="form-label"
+      <label for="q401" class="form-label"
         >Do you have any difficulty swallowing food or liquids (dysphagia)?
       </label>
       <input
         type="text"
         class="form-control"
-        formControlName="q40"
-        [(ngModel)]="q40"
+        formControlName="q401"
+        [(ngModel)]="q401"
       />
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
@@ -428,35 +428,8 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q32" class="form-label"
-        >Do you experience difficulty or pain while urinating?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q32"
-        [(ngModel)]="q32"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
-
-      <label for="q32" class="form-label"
-        >Do you have a history of urinary tract infections (UTIs)?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q32"
-        [(ngModel)]="q32"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
-
-      <h2 class="mt-2 mb-2">Reproductive System</h2>
       <label for="q33" class="form-label"
-        >When was your last menstruation period? (For Women Only)
+        >Do you experience difficulty or pain while urinating?
       </label>
       <input
         type="text"
@@ -467,8 +440,9 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
+
       <label for="q34" class="form-label"
-        >How many days was your menstrual cycle? (For Women Only)
+        >Do you have a history of urinary tract infections (UTIs)?
       </label>
       <input
         type="text"
@@ -480,10 +454,9 @@
         Field is Required!
       </div>
 
+      <h2 class="mt-2 mb-2">Reproductive System</h2>
       <label for="q35" class="form-label"
-        >Are there any discharges during your cycle? (For Women Only) If yes,
-        what is the texture? (thin, thick, creamy) and its color (white, clear,
-        yellow, green).
+        >When was your last menstruation period? (For Women Only)
       </label>
       <input
         type="text"
@@ -494,7 +467,9 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q36" class="form-label">Are you sexually active? </label>
+      <label for="q36" class="form-label"
+        >How many days was your menstrual cycle? (For Women Only)
+      </label>
       <input
         type="text"
         class="form-control"
@@ -504,8 +479,11 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
+
       <label for="q37" class="form-label"
-        >Do you use any forms of contraceptives?
+        >Are there any discharges during your cycle? (For Women Only) If yes,
+        what is the texture? (thin, thick, creamy) and its color (white, clear,
+        yellow, green).
       </label>
       <input
         type="text"
@@ -516,8 +494,18 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q39" class="form-label">
-        Do you see any discharges coming out of your genitals?
+      <label for="q38" class="form-label">Are you sexually active? </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q38"
+        [(ngModel)]="q38"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q39" class="form-label"
+        >Do you use any forms of contraceptives?
       </label>
       <input
         type="text"
@@ -528,15 +516,27 @@
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!
       </div>
-      <label for="q40" class="form-label"
+      <label for="q402" class="form-label">
+        Do you see any discharges coming out of your genitals?
+      </label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="q402"
+        [(ngModel)]="q402"
+      />
+      <div *ngIf="validField" class="alert alert-danger">
+        Field is Required!
+      </div>
+      <label for="q403" class="form-label"
         >Have you ever been diagnosed with any sexually transmitted diseases
         (STDs) in the past or present?
       </label>
       <input
         type="text"
         class="form-control"
-        formControlName="q40"
-        [(ngModel)]="q40"
+        formControlName="q403"
+        [(ngModel)]="q403"
       />
       <div *ngIf="validField" class="alert alert-danger">
         Field is Required!

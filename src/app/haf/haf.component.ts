@@ -72,8 +72,12 @@ export class HAFComponent {
   q35: string = '';
   q36: string = '';
   q37: string = '';
+  q38: string = '';
   q39: string = '';
   q40: string = '';
+  q401: string = '';
+  q402: string = '';
+  q403: string = '';
 
 
   validName: boolean = false;
@@ -120,8 +124,12 @@ export class HAFComponent {
       q35: [''],
       q36: [''],
       q37: [''],
+      q38: [''],
       q39: [''],
       q40: [''],
+      q401: [''],
+      q402: [''],
+      q403: [''],
     });
   }
 
