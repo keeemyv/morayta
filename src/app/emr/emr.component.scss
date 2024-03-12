@@ -50,7 +50,7 @@
   }
 }
 
-button[type="submit"] {
+button {
   margin-top: 20px;
   padding: 10px 20px;
   color: #fff;
@@ -61,3 +61,8 @@ button[type="submit"] {
 }
 
 .submitted-info {display: flex;}
+
+.baton {
+  margin-left: 50px;
+
+}

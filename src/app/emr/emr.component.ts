@@ -44,6 +44,7 @@ interface Submission {
 export class EMRComponent {
   emrForm: FormGroup = new FormGroup({});
   submittedData: Submission[] = [];
+  addMode: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -81,6 +82,10 @@ export class EMRComponent {
     }
   }
 
+  toggleAdd() {
+    this.addMode = !this.addMode;
+  }
+
   onSubmit(): void {
     console.log('Submit button clicked.'); // Debugging statement
     if (this.emrForm.valid) {
@@ -102,6 +107,7 @@ export class EMRComponent {
       alert('Submitted data successfully!');
       // Reset form after submission
       this.emrForm.reset();
+      this.addMode = false;
     } else {
       alert('Please fill out all of the fields.');
       console.log('Form is invalid.'); // Debugging statement
